@@ -1,12 +1,12 @@
 import Hero from '../components/Hero';
 import CityCard from '../components/CityCard';
-import ActivityCard from '../components/ActivityCard';
 import CTASection from '../components/CTASection';
+import ClientReviews from '../components/ClientReviews';
 import { cities } from '../data/cities';
-import { activities } from '../data/activities';
 
 const Home = () => {
-  const featuredActivities = activities.slice(0, 6);
+  // Filter out Rabat from cities
+  const displayedCities = cities.filter(city => city.slug !== 'rabat');
 
   return (
     <div>
@@ -29,28 +29,8 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {cities.map((city) => (
+            {displayedCities.map((city) => (
               <CityCard key={city.id} city={city} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Activities */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-dark">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              Featured Experiences
-            </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Curated luxury activities and tours across Morocco
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {featuredActivities.map((activity) => (
-              <ActivityCard key={activity.id} activity={activity} />
             ))}
           </div>
         </div>
@@ -104,6 +84,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Client Reviews Section */}
+      <ClientReviews />
 
       <CTASection />
     </div>

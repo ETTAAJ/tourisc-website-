@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Hero = ({ title, subtitle, image, showButtons = true, citySlug = null }) => {
+const Hero = ({ title, subtitle, image, showButtons = true, citySlug = null, buttonText = null, buttonLink = null }) => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div
@@ -24,7 +24,14 @@ const Hero = ({ title, subtitle, image, showButtons = true, citySlug = null }) =
 
         {showButtons && (
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            {citySlug ? (
+            {buttonText && buttonLink ? (
+              <Link
+                to={buttonLink}
+                className="px-8 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange/90 transition-all duration-300 shadow-lg hover:shadow-orange/50"
+              >
+                {buttonText}
+              </Link>
+            ) : citySlug ? (
               <Link
                 to={`/${citySlug}`}
                 className="px-8 py-4 bg-orange text-white font-semibold rounded-xl hover:bg-orange/90 transition-all duration-300 shadow-lg hover:shadow-orange/50"
@@ -39,12 +46,14 @@ const Hero = ({ title, subtitle, image, showButtons = true, citySlug = null }) =
                 Start Your Journey
               </Link>
             )}
-            <Link
-              to="/#destinations"
-              className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-dark transition-all duration-300"
-            >
-              View Destinations
-            </Link>
+            {!buttonText && (
+              <Link
+                to="/#destinations"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-dark transition-all duration-300"
+              >
+                View Destinations
+              </Link>
+            )}
           </div>
         )}
       </div>

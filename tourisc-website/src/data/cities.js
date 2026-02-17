@@ -28,7 +28,7 @@ export const cities = [
     name: 'Agadir',
     slug: 'agadir',
     description: 'Coastal paradise with golden beaches and year-round sunshine',
-    image: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=1200&h=800&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop&q=80',
     shortDescription: 'Relax on pristine beaches, enjoy water sports, and experience the modern resort lifestyle.',
   },
 ];
