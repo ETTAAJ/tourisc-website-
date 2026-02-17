@@ -5,8 +5,9 @@ const FilterBar = ({ onFilterChange }) => {
 
   const filters = [
     { id: 'all', label: 'All' },
-    { id: 'Cultural', label: 'Cultural' },
+    { id: 'Cultural', label: 'Culture' },
     { id: 'Adventure', label: 'Adventure' },
+    { id: 'Food', label: 'Food' },
     { id: 'Historical', label: 'Historical' },
     { id: 'Leisure', label: 'Leisure' },
   ];

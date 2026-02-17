@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Marrakech from './pages/Marrakech';
-import Rabat from './pages/Rabat';
 import Fes from './pages/Fes';
 import Agadir from './pages/Agadir';
 import ActivityDetails from './pages/ActivityDetails';
@@ -17,7 +16,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/marrakech" element={<Marrakech />} />
-            <Route path="/rabat" element={<Rabat />} />
             <Route path="/fes" element={<Fes />} />
             <Route path="/agadir" element={<Agadir />} />
             <Route path="/activity/:id" element={<ActivityDetails />} />

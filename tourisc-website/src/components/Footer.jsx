@@ -21,11 +21,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/rabat" className="text-white/60 hover:text-orange transition-all duration-300 text-sm">
-                  Rabat
-                </Link>
-              </li>
-              <li>
                 <Link to="/fes" className="text-white/60 hover:text-orange transition-all duration-300 text-sm">
                   Fes
                 </Link>

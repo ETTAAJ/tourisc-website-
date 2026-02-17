@@ -8,7 +8,6 @@ const Navbar = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/marrakech', label: 'Marrakech' },
-    { path: '/rabat', label: 'Rabat' },
     { path: '/fes', label: 'Fes' },
     { path: '/agadir', label: 'Agadir' },
   ];
